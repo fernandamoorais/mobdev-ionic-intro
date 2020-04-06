@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute } from '@angular/router';
 @Component({
-  selector: 'app-films-detaisl',
-  templateUrl: './films-detaisl.page.html',
-  styleUrls: ['./films-detaisl.page.scss'],
+selector: 'app-film-details',
+templateUrl: './film-details.page.html',
+styleUrls: ['./film-details.page.scss'],
 })
-export class FilmsDetaislPage implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class FilmDetailsPage implements OnInit {
+filmId = null;
+constructor(private activatedRoute: ActivatedRoute) { }
+ngOnInit() {
+this.filmId = this.activatedRoute.snapshot.paramMap.get('id');
+}
 }

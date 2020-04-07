@@ -9,7 +9,7 @@ const routes: Routes = [
     component: FilmsPage
   }
 ];
-
+//fazendo um coment
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
